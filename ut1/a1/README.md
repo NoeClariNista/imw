@@ -12,7 +12,7 @@ Lo que queremos realizar es que en nuestro home, donde tenemos nuestro usuario a
 
 Añadiremos el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio alu5904.me/series.
 
-Creamos un fichero dentro de Nginx y en concreto en los sites-available, donde añadiremos unas líneas para que se vaya creando el dominio.
+Creamos un fichero dentro de Nginx y en concreto en los sites-available, donde añadiremos la información para que se vaya creando el dominio.
 
 ![imagen01](./img/01.png)
 
@@ -26,7 +26,7 @@ Tenemos que recargar la configuración de Nginx para que los cambios surtan efec
 
 ![imagen04](./img/04.png)
 
-Por último, creamos una carpeta dentro de webapps de series donde irá el index.html de nuestro host de series.
+Por último, creamos una carpeta dentro de webapps de series donde irá el index.html de nuestro Vitual Host de series.
 
 ![imagen05](./img/05.png)
 
