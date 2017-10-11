@@ -52,6 +52,8 @@ Ahora empezamos a trabajar en el index.html del imw.
 
 ![imagen12](./img/12.png)
 
+Ahora añadimos el contenido a imw.
+
 ![imagen13](./img/13.png)
 
 Recargamos la configuración de Nginx para que los cambios surtan efecto.
@@ -82,13 +84,15 @@ Por último, tenemos que recargar la configuración de Nginx para que los cambio
 
 ![imagen19](./img/19.png)
 
-Ahora creamos una carpeta dentro de webapps donde estara el index.html de nuestra página web.
+Ahora creamos una carpeta mec dentro de webapps donde estara el index.html de nuestra página web.
 
 ![imagen20](./img/20.png)
 
 Ahora empezamos a trabajar en el index.html del mec.
 
 ![imagen21](./img/21.png)
+
+Ahora añadimos el contenido a mec.
 
 ![imagen22](./img/22.png)
 
@@ -138,19 +142,15 @@ Finalmente entramos desde un navegador a http://varlib.alu5904.me:9000.
 
 * https://ssl.alu5904.me/students/.
 
-Esta página web debe mostrar una página web con el nombre de todo el alumnado de clase. Debe pedir usuario/clave. Los datos son: USUARIO: usuario1 y CLAVE: aula108. Debemos prohibir explícitamente el acceso al fichero .htpasswd.
+Esta página web debe mostrar una página web con el nombre de todo el alumnado de clase. También debe pedir usuario y clave.
 
-Lo primero que tenemos que hacer es crear una contraseña, para ello utilizamos el comando siguiente, el cual nos cifra la contreña en salt hash.
+Lo primero que tenemos que hacer es crear una contraseña, para ello utilizamos el comando siguiente, el cual nos cifra la contreña en salt hash. La contraseña sera aula108.
 
 ![imagen31](./img/31.png)
 
-Esta contraseña la introducimos dentro del fichero .htpasswd.
+Esta contraseña la introducimos dentro del fichero .htpasswd. También introducimos el usuario que es usuario1.
 
 ![imagen32](./img/32.png)
-
-Este fichero tendra prohibido el acceso.
-
-![imagen33](./img/33.png)
 
 Luego creamos una carpeta dentro de webapps donde estara el index.html y el .htpasswd de nuestra página web.
 
@@ -178,6 +178,8 @@ Ahora empezamos a trabajar en el index.html del students.
 
 ![imagen40](./img/40.png)
 
+Ahora añadimos el contenido a students.
+
 ![imagen41](./img/41.png)
 
 Recargamos la configuración de Nginx para que los cambios surtan efecto.
@@ -194,11 +196,9 @@ Nos pide un usuario y una contraseña, si la ponemos correcta nos ocurrira lo si
 
 ![imagen45](./img/45.png)
 
-En el caso de poner mal la contraseña nos ocurrira lo siguiente.
+En el caso de poner mal la contraseña nos ocurrira que repetirare todo el rato para identificarnos.
 
 ![imagen46](./img/46.png)
-
-Nos repetira siempre la identificación hasta que pongamos la correcta.
 
 ___
 
@@ -235,7 +235,6 @@ Finalmente entramos desde un navegador a http://redirect.alu5904.me, http://www.
 El resultado de estas tres páginas web es el siguiente.
 
 ![imagen54](./img/.png)
-
 
 * http://target.alu5904.me.
 
