@@ -206,62 +206,73 @@ ___
 
 * http://redirect.alu5904.me.
 
-Esta página web se debe redirigir cualquier petición de este dominio a http://target.alu5904.me.
+La página web http://redirect.alu5904.me se debe redirigir cualquier petición de este dominio a http://target.alu5904.me.
 
-Lo primero que hacemos es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio imw.alu5904.me. Para ello vamos a la ruta /etc/nginx/sites-available/ y creamos el fichero target.
+Lo primero que hacemos es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio redirect.alu5904.me. Para ello vamos a la ruta /etc/nginx/sites-available/ y creamos el fichero redirect.
 
-![imagen](./img/.png)
+![imagen47](./img/47.png)
 
-Ahora tenemos que ir a la moodle de IMW y descargarnos la imagen del Diagrama de unidades de trabajo.
+Ahora añadimos el contenido a redirect.
 
-![imagen05](./img/05.png)
-
-![imagen06](./img/06.png)
-
-Ahora el archivo .zip que hemos descargado en la máquina de desarrollo la copiamos a la máquina de producción.
-
-![imagen](./img/.png)
-
-Comprobamos que tenemos el archivo .zip en la máquina de producción y lo descomprimimos.
-
-![imagen08](./img/08.png)
-
-Ahora añadimos el contenido a imw.
-
-![imagen](./img/.png)
+![imagen48](./img/48.png)
 
 A continuación tenemos que enlazar el fichero que hemos creado para que esté disponible desde los sites-enabled. Para ello entramos a /etc/nginx/sites-enabled, hacemos un enlace simbólico y lo comprobamos.
 
-![imagen](./img/.png)
+![imagen49](./img/49.png)
 
 Por último, tenemos que recargar la configuración de Nginx para que los cambios surtan efecto, para ello utilizamos el comando systemctl reload nginx.
 
-![imagen](./img/.png)
-
-Ahora empezamos a trabajar en el index.html del redirect.
-
-![imagen](./img/.png)
-
-![imagen](./img/.png)
-
-Recargamos la configuración de Nginx para que los cambios surtan efecto.
-
-![imagen](./img/.png)
+![imagen50](./img/50.png)
 
 Finalmente entramos desde un navegador a http://redirect.alu5904.me, http://www.redirect.alu5904.me/probando y http://www.redirect.alu5904.me/hola.
 
-![imagen](./img/.png)
+![imagen51](./img/.png)
 
-![imagen](./img/.png)
+![imagen52](./img/.png)
 
-![imagen](./img/.png)
+![imagen53](./img/.png)
+
+El resultado de estas tres páginas web es el siguiente.
+
+![imagen54](./img/.png)
+
 
 * http://target.alu5904.me.
 
 Al acceder a esta página web se debe mostrar la página web siguiente initializr-verekia-4.0.zip.
 
-Para copiar y descomprimir el fichero initializr.zip se recomienda usar alguna de las siguientes herramientas: curl, wget, scp, unzip.
+Ahora tenemos que ir a la máquina de desarrollo y descargamos un archivo comprimido.
 
-Los logfiles deben ser: /var/log/nginx/redirect/access.log y /var/log/nginx/redirect/error.log.
+![imagen55](./img/55.png)
+
+Comprobamos que tenemos el archivo comprimido en la máquina de desarrollo.
+
+![imagen56](./img/56.png)
+
+Ahora el archivo .zip que hemos descargado en la máquina de desarrollo la copiamos a la máquina de producción.
+
+![imagen57](./img/57.png)
+
+Comprobamos que tenemos el archivo .zip en la máquina de producción y lo descomprimimos.
+
+![imagen58](./img/58.png)
+
+![imagen59](./img/59.png)
+
+Lo que hacemos ahora es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio target.alu5904.me. Para ello vamos a la ruta /etc/nginx/sites-available/ y creamos el fichero target.
+
+![imagen60](./img/60.png)
+
+A continuación tenemos que enlazar el fichero que hemos creado para que esté disponible desde los sites-enabled. Para ello entramos a /etc/nginx/sites-enabled, hacemos un enlace simbólico y lo comprobamos.
+
+![imagen61](./img/61.png)
+
+Recargamos la configuración de Nginx para que los cambios surtan efecto.
+
+![imagen62](./img/62.png)
+
+Finalmente entramos desde un navegador a http://target.alu5904.me.
+
+![imagen63](./img/63.png)
 
 ---
