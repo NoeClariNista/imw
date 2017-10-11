@@ -224,7 +224,7 @@ Por último, tenemos que recargar la configuración de Nginx para que los cambio
 
 ![imagen50](./img/50.png)
 
-Finalmente entramos desde un navegador a http://redirect.alu5904.me, http://www.redirect.alu5904.me/probando y http://www.redirect.alu5904.me/hola.
+Finalmente entramos desde un navegador a http://redirect.alu5904.me, http://redirect.alu5904.me/test, http://www.redirect.alu5904.me http://www.redirect.alu5904.me/probando y http://www.redirect.alu5904.me/hola.
 
 ![imagen51](./img/.png)
 
@@ -232,9 +232,9 @@ Finalmente entramos desde un navegador a http://redirect.alu5904.me, http://www.
 
 ![imagen53](./img/.png)
 
-El resultado de estas tres páginas web es el siguiente.
-
 ![imagen54](./img/.png)
+
+![imagen5](./img/.png)
 
 * http://target.alu5904.me.
 
@@ -261,6 +261,10 @@ Comprobamos que tenemos el archivo .zip en la máquina de producción y lo desco
 Lo que hacemos ahora es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio target.alu5904.me. Para ello vamos a la ruta /etc/nginx/sites-available/ y creamos el fichero target.
 
 ![imagen60](./img/60.png)
+
+Ahora añadimos el contenido a imw.
+
+![imagen](./img/.png)
 
 A continuación tenemos que enlazar el fichero que hemos creado para que esté disponible desde los sites-enabled. Para ello entramos a /etc/nginx/sites-enabled, hacemos un enlace simbólico y lo comprobamos.
 
