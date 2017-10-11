@@ -1,14 +1,14 @@
 ___
 
-# UT1. A3. Trabajo Con Virtual Hosts.
+# **UT1. A3. Trabajo Con Virtual Hosts.**
 
 Esta actividad consiste en configurar 4 sitios web (Virtual Hosts) en nuestro servidor Web Nginx.
 
 ---
 
-# Sitio Web 1.
+# **Sitio Web 1.**
 
-* http://imw.alu5904.me.
+* **http://imw.alu5904.me.**
 
 Esta página web debe mostrar una página web con la imagen de "Diagrama de unidades de trabajo" de IMW.
 
@@ -64,7 +64,7 @@ Finalmente entramos desde un navegador a http://imw.alu5904.me.
 
 ![imagen15](./img/15.png)
 
-* http://imw.alu5904.me/mec/.
+* **http://imw.alu5904.me/mec/.**
 
 Esta página web debe mostrar una página con un enlace al Real decreto del título de Administración de Sistemas Informáticos en Red - MEC.
 
@@ -110,9 +110,9 @@ Si pinchamos en el enlace se mostrara lo siguiente.
 
 ___
 
-# Sitio Web 2.
+# **Sitio Web 2.**
 
-* http://varlib.alu5904.me:9000.
+* **http://varlib.alu5904.me:9000.**
 
 Esta página web debe mostrar el listado de ficheros y directorios de /var/lib de la máquina de producción.
 
@@ -138,17 +138,17 @@ Finalmente entramos desde un navegador a http://varlib.alu5904.me:9000.
 
 ---
 
-# Sitio Web 3.
+# **Sitio Web 3.**
 
-* https://ssl.alu5904.me/students/.
+* **https://ssl.alu5904.me/students/.**
 
-Esta página web debe mostrar una página web con el nombre de todo el alumnado de clase. También debe pedir usuario y clave.
+Esta página web debe mostrar una página web con el nombre de todo el alumnado de clase. También debe pedir usuario y clave antes de poder acceder a esta información.
 
-Lo primero que tenemos que hacer es crear una contraseña, para ello utilizamos el comando siguiente, el cual nos cifra la contreña en salt hash. La contraseña sera aula108.
+// Lo primero que tenemos que hacer es crear una contraseña, para ello utilizamos el comando perl -le 'print crypt/("","salt-hash")', el cual nos cifra la contreña en salt hash y nos la devuelve por pantalla cifrada. La contraseña sera aula108.
 
 ![imagen31](./img/31.png)
 
-Esta contraseña la introducimos dentro del fichero .htpasswd. También introducimos el usuario que es usuario1.
+Esta contraseña la introducimos dentro del fichero .htpasswd. También introducimos dentro de .htpasswd el usuario con el que nos conectaremos que es usuario1.
 
 ![imagen32](./img/32.png)
 
@@ -186,7 +186,7 @@ Recargamos la configuración de Nginx para que los cambios surtan efecto.
 
 ![imagen42](./img/42.png)
 
-Finalmente entramos desde un navegador a http://ssl.alu5904.me/students/.
+Finalmente entramos desde un navegador a https://ssl.alu5904.me/students/.
 
 ![imagen43](./img/43.png)
 
@@ -200,15 +200,19 @@ En el caso de poner mal la contraseña nos ocurrira que repetirare todo el rato 
 
 ![imagen46](./img/46.png)
 
+Si queremos entrar en https://ssl.alu5904.me/students/.htpasswd nos saldra lo siguiente.
+
+![imagen](./img/.png)
+
 ___
 
-# Sitio Web 4.
+# **Sitio Web 4.**
 
-* http://redirect.alu5904.me.
+* **http://redirect.alu5904.me.**
 
-La página web http://redirect.alu5904.me se debe redirigir cualquier petición de este dominio a http://target.alu5904.me.
+La página web http://redirect.alu5904.me y http://www.redirect.alu5904.me se debe redirigir cualquier petición de este dominio a http://target.alu5904.me.
 
-Lo primero que hacemos es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio redirect.alu5904.me. Para ello vamos a la ruta /etc/nginx/sites-available/ y creamos el fichero redirect.
+Lo primero que hacemos es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan a los nombres de dominios redirect.alu5904.me y www.redirect.alu5904.me. Para ello vamos a la ruta /etc/nginx/sites-available/ y creamos el fichero redirect.
 
 ![imagen47](./img/47.png)
 
@@ -234,11 +238,11 @@ Finalmente entramos desde un navegador a http://redirect.alu5904.me, http://redi
 
 ![imagen54](./img/.png)
 
-![imagen5](./img/.png)
+![imagen55](./img/.png)
 
-* http://target.alu5904.me.
+* **http://target.alu5904.me.**
 
-Al acceder a esta página web se debe mostrar la página web siguiente initializr-verekia-4.0.zip.
+Al acceder a esta página web se debe mostrar la página web del archivo comprimido initializr-verekia-4.0.zip.
 
 Ahora tenemos que ir a la máquina de desarrollo y descargamos un archivo comprimido.
 
@@ -262,7 +266,7 @@ Lo que hacemos ahora es añadir el fichero de configuración de Nginx que tratar
 
 ![imagen60](./img/60.png)
 
-Ahora añadimos el contenido a imw.
+Ahora añadimos el contenido a target.
 
 ![imagen](./img/.png)
 
