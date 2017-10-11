@@ -262,7 +262,7 @@ Ahora añadimos el contenido a target. Dentro de este fichero también creamos l
 
 ![imagen58](./img/58.png)
 
-A continuación tenemos que enlazar el fichero que hemos creado para que esté disponible desde los sites-enabled. Para ello entramos a /etc/nginx/sites-enabled, hacemos un enlace simbólico y lo comprobamos. 
+A continuación tenemos que enlazar el fichero que hemos creado para que esté disponible desde los sites-enabled. Para ello entramos a /etc/nginx/sites-enabled, hacemos un enlace simbólico y lo comprobamos.
 
 ![imagen59](./img/59.png)
 
