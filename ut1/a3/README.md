@@ -156,7 +156,7 @@ Luego creamos una carpeta mec dentro de webapps donde estara el index.html y el 
 
 ![imagen33](./img/33.png)
 
-Movemos el .htpasswd dentro de la carpeta students.
+Movemos el .htpasswd dentro de la carpeta students. 
 
 ![imagen34](./img/34.png)
 
