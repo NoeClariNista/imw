@@ -230,4 +230,5 @@ En este punto, podemos comprobar que el acceso a la aplicación está funcionand
 Finalmente entramos desde un navegador a http://php.alu5904.me.
 
 ![imagen39](./img/39.png)
+
 ---
