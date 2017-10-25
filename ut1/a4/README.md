@@ -2,7 +2,7 @@ ___
 
 # **UT1. A4. Sirviendo Aplicaciones Php Y Python.**
 
-La actividad consiste en configurar 4 sitios web, virtual hosts, en nuestro servidor web Nginx, con las siguientes características.
+La actividad consiste en configurar 2 sitios web, virtual hosts, en nuestro servidor web Nginx.
 
 ___
 
@@ -54,37 +54,40 @@ ___
 
 Creamos un nuevo entorno virtual.
 
-![imagen10](./img/10.png) > mkdir .virtualenvs , virtualenv .virtualenvs/now
+![imagen10](./img/10.png)
 
 Entramos dentro de nuestro entorno virtual.
 
-![imagen11](./img/11.png) > source .virtualenvs/hellopython/bin/activate
+![imagen11](./img/11.png)
 
 Ahora dentro de nuestro entorno virtual creamos el directorio now.
 
-![imagen12](./img/12.png) > mkdir hellopython
+![imagen12](./img/12.png)
 
 Entramos dentro de este directorio y creamos el fichero main.py.
 
-![imagen13](./img/13.png) > cd hellopython , nano main.py
+![imagen13](./img/13.png)
 
 Ahora añadimos el siguiente contenido a main.py.
 
 ~~~
 import datetime
+import pytz
 from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    now = datetime.datetime.now(pytz.timezone("Atlantic/Canary"))
     return """
     <h1>Testing Python over Nginx</h1>
+    <h2>In Canary Islands...</h2>
     Today is: {today}
     <br>
     Now is: {now}
     """.format(
-        today=datetime.datetime.now().strftime("%d/%m/%Y"),
-        now=datetime.datetime.now().strftime("%H:%mh")
+        today=now.strftime("%d/%m/%Y"),
+        now=now.strftime("%H:%Mh")
     )
 ~~~
 
@@ -92,11 +95,11 @@ def hello():
 
 Ahora lanzamos el proceso que escuchará peticiones.
 
-![imagen15](./img/15.png) > uwsgi --socket 0.0.0.0:8080 --protocol=http -w main:app
+![imagen15](./img/15.png)
 
 Vamos a un navegador y ponemos http://alu5904.me:8080.
 
-![imagen16](./img/16.png)
+![imagen16](./img/16.png)  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> (FALTA)
 
 Creamos un fichero de configuración para uWSGI.
 
@@ -115,11 +118,13 @@ chmod-socket = 666
 vacuum = true
 ~~~
 
+![imagen18](./img/18.png)
+
 Ahora tenemos que crear un pequeño script que será el encargado de activar el entorno virtual de nuestra aplicación y de lanzar el proceso uwsgi para que escuche peticiones en el socket especificado.
 
-![imagen18](./img/18.png) > nano run.sh
-
 Ahora añadimos el siguiente contenido a run.sh.
+
+![imagen20](./img/20.png)
 
 ~~~
 #!/bin/bash
@@ -128,13 +133,15 @@ source /home/alu5904/.virtualenvs/now/bin/activate
 uwsgi --ini /home/alu5904/now/uwsgi.ini
 ~~~
 
+![imagen19](./img/19.png)
+
 Ahora le damos permisos de ejecución al script que hemos creado.
 
-![imagen19](./img/19.png) > chmod +x run.sh , ls -l run.sh
+![imagen19](./img/19.png)
 
 En este punto, podríamos lanzar el script run.sh sin tener que activar el entorno virtual previamente, ya que el propio script realiza esta tarea.
 
-![imagen20](./img/20.png) > ./run.sh
+![imagen20](./img/20.png)
 
 Vamos a crear un virtual host para nuestra aplicación python. Queremos que responda a peticiones a la url http://now.imwpto.me. Para ello haremos lo siguiente.
 
