@@ -139,7 +139,7 @@ En este punto, podríamos lanzar el script run.sh sin tener que activar el entor
 
 ![imagen21](./img/21.png)
 
-Ahora lo que hacemos es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio now.alu5904.me. Para ello vamos a la ruta `/etc/nginx/sites-available/` y creamos el fichero demo.
+Ahora lo que hacemos es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio now.alu5904.me. Para ello vamos a la ruta `/etc/nginx/sites-available/` y creamos el fichero now.
 
 ![imagen22](./img/22.png)
 
