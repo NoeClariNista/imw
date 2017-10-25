@@ -22,7 +22,7 @@ Descomprimimos el archivo demo_php.zip.
 
 ![imagen03](./img/03.png)
 
-Comprobamos que se a descomprimido el archivo.
+Comprobamos que se ha descomprimido el archivo.
 
 ![imagen04](./img/04.png)
 
@@ -168,7 +168,7 @@ A continuación tenemos que enlazar el fichero que hemos creado para que esté d
 
 Por último, tenemos que recargar la configuración de Nginx para que los cambios surtan efecto, para ello utilizamos el comando systemctl reload nginx.
 
-![imagen25](./img/25.ong)
+![imagen25](./img/25.png)
 
 Para mantener nuestra aplicación "viva" y poder gestionar su arranque/parada de manera sencilla, necesitamos un proceso coordinador. Para este cometido, se ha desarrollado supervisor.
 
