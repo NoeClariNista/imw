@@ -97,15 +97,9 @@ def hello():
 
 ![imagen15](./img/15.png)
 
-Ahora lanzamos el proceso que escuchará peticiones.
-
-![imagen16](./img/16.png)
-
-Vamos a un navegador y ponemos http://alu5904.me:8080.
-
 Creamos un fichero de configuración para uWSGI.
 
-![imagen17](./img/17.png)
+![imagen16](./img/16.png)
 
 Ahora añadimos el siguiente contenido a uwsgi.ini.
 
@@ -120,11 +114,11 @@ chmod-socket = 666
 vacuum = true
 ~~~
 
-![imagen18](./img/18.png)
+![imagen17](./img/17.png)
 
 Ahora tenemos que crear un pequeño script que será el encargado de activar el entorno virtual de nuestra aplicación y de lanzar el proceso uwsgi para que escuche peticiones en el socket especificado.
 
-![imagen19](./img/19.png)
+![imagen18](./img/18.png)
 
 Ahora añadimos el siguiente contenido a run.sh.
 
@@ -135,19 +129,19 @@ source /home/alu5904/.virtualenvs/now/bin/activate
 uwsgi --ini /home/alu5904/now/uwsgi.ini
 ~~~
 
-![imagen20](./img/20.png)
+![imagen19](./img/19.png)
 
 Ahora le damos permisos de ejecución al script que hemos creado.
 
-![imagen21](./img/21.png)
+![imagen20](./img/20.png)
 
 En este punto, podríamos lanzar el script run.sh sin tener que activar el entorno virtual previamente, ya que el propio script realiza esta tarea.
 
-![imagen22](./img/22.png)
+![imagen21](./img/21.png)
 
 Ahora lo que hacemos es añadir el fichero de configuración de Nginx que tratará las peticiones que se hagan al nombre de dominio now.alu5904.me. Para ello vamos a la ruta `/etc/nginx/sites-available/` y creamos el fichero demo.
 
-![imagen23](./img/23.png)
+![imagen22](./img/22.png)
 
 Ahora añadimos el siguiente contenido a now.
 
@@ -166,25 +160,25 @@ server {
 }
 ~~~
 
-![imagen24](./img/24.png)
+![imagen23](./img/23.png)
 
 A continuación tenemos que enlazar el fichero que hemos creado para que esté disponible desde los sites-enabled. Para ello entramos a `/etc/nginx/sites-enabled`, hacemos un enlace simbólico y lo comprobamos.
 
-![imagen25](./img/25.png)
+![imagen24](./img/24.png)
 
 Por último, tenemos que recargar la configuración de Nginx para que los cambios surtan efecto, para ello utilizamos el comando systemctl reload nginx.
 
-![imagen26](./img/26.ong)
+![imagen25](./img/25.ong)
 
 Para mantener nuestra aplicación "viva" y poder gestionar su arranque/parada de manera sencilla, necesitamos un proceso coordinador. Para este cometido, se ha desarrollado supervisor.
 
 Comprobamos que el servicio está funcionando.
 
-![imagen27](./img/27.png)
+![imagen26](./img/26.png)
 
 Para que nuestro programa now sea gestionado por supervisor, debemos añadir un fichero de configuración.
 
-![imagen28](./img/28.png)
+![imagen27](./img/27.png)
 
 Ahora añadimos el siguiente contenido a now.conf.
 
@@ -200,26 +194,33 @@ stderr_logfile = /home/alu5904/now/now.err.log
 stdout_logfile = /home/alu5904/now/now.out.log
 ~~~
 
-![imagen29](./img/29.png)
+![imagen28](./img/28.png)
 
 Reiniciamos el servicio del supervisor.
 
-![imagen30](./img/30.png)
+![imagen29](./img/29.png)
 
 Comprobamos que el servicio está funcionando con normalidad.
 
-![imagen31](./img/31.png)
+![imagen30](./img/30.png)
 
 Ahora, desde la máquina de producción, pero con un usuario no privilegiado, vemos que ya podemos hacer uso de la gestión de nuestros procesos.
 
+![imagen31](./img/31.png)
+
+En este punto, podemos probar los siguientes comandos.
+
+~~~
+* supervisorctl status
+* supervisorctl start now
+* supervisorctl stop now
+* supervisorctl restart now
+~~~
+
 ![imagen32](./img/32.png)
-
-En este punto, podemos comprobar que el acceso a la aplicación está funcionando.
-
-![imagen33](./img/33.png)
 
 Finalmente entramos desde un navegador a http://now.alu5904.me.
 
-![imagen34](./img/34.png)
+![imagen33](./img/33.png)
 
 ---
