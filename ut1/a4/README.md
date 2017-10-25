@@ -2,7 +2,7 @@ ___
 
 # **UT1. A4. Sirviendo Aplicaciones Php Y Python.**
 
-La actividad consiste en configurar 2 sitios web, virtual hosts, en nuestro Servidor Web Nginx.
+La actividad consiste en configurar 2 sitios web, Virtual Hosts, en nuestro Servidor Web Nginx.
 
 ___
 
@@ -149,7 +149,7 @@ Ahora lo que hacemos es añadir el fichero de configuración de Nginx que tratar
 
 ![imagen23](./img/23.png)
 
-Ahora añadimos el contenido a now.
+Ahora añadimos el siguiente contenido a now.
 
 ~~~
 server {
@@ -186,11 +186,11 @@ Para que nuestro programa now sea gestionado por supervisor, debemos añadir un 
 
 ![imagen28](./img/28.png)
 
-Ahora añadimos el contenido a now.conf.
+Ahora añadimos el siguiente contenido a now.conf.
 
 ~~~
-[program:hellopython]
-user = sdelquin
+[program:now]
+user = alu5904
 command = /home/alu5904/now/run.sh
 autostart = true
 autorestart = true
@@ -218,7 +218,7 @@ En este punto, podemos comprobar que el acceso a la aplicación está funcionand
 
 ![imagen33](./img/33.png)
 
-Finalmente entramos desde un navegador a http://php.alu5904.me.
+Finalmente entramos desde un navegador a http://now.alu5904.me.
 
 ![imagen34](./img/34.png)
 
