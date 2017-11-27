@@ -6,44 +6,44 @@ import sys
 def num_vowels(text):
     VOWELS = "aeiou"
     text = text.lower()
-    num = 0
-    for i in text:
-        if i in VOWELS:
-            num += 1
-    return num
+    number = 0
+    for vowel in text:
+        if vowel in VOWELS:
+            number += 1
+    return number
 
 
 def num_whitespaces(text):
-    num = 0
-    for i in text:
-        if i == " ":
-            num += 1
-    return num
+    number = 0
+    for space in text:
+        if space == " ":
+            number += 1
+    return number
 
 
 def num_digits(text):
     NUMBERS = "0123456789"
-    num = 0
-    for i in text:
-        if i in NUMBERS:
-            num += 1
-    return num
+    number = 0
+    for number in text:
+        if number in NUMBERS:
+            number += 1
+    return number
 
 
 def num_words(text):
     text = text.split(" ")
-    nw = len(text)
-    return nw
+    number_word = len(text)
+    return number_word
 
 
 def reverse(text):
-    inv = text[-1::-1]
-    return inv
+    inverse = text[-1::-1]
+    return inverse
 
 
 def length(text):
-    l = len(text)
-    return l
+    lengh = len(text)
+    return lengh
 
 
 def halfs(text):
@@ -55,20 +55,20 @@ def halfs(text):
 
 def upper_vowels(text):
     VOWELS = "aeiouAEIOU"
-    utext = ""
+    uppertext = ""
     for vowel in text:
         if vowel in VOWELS:
-            utext += vowel.upper()
+            uppertext += vowel.upper()
         else:
-            utext += vowel
-    return utext
+            uppertext += vowel
+    return uppertext
 
 
 def sorted_by_words(text):
     text = text.split(" ")
-    textsorted = sorted(text)
-    sbw = " ".join(textsorted)
-    return sbw
+    sortedtext = sorted(text)
+    sortedwords = " ".join(sortedtext)
+    return sortedwords
 
 
 def length_of_words(text):
@@ -78,8 +78,8 @@ def length_of_words(text):
     for i in range(listsize):
         value = len(text[i])
         newlist.append(str(value))
-    low = " ".join(newlist)
-    return low
+    lengthwords = " ".join(newlist)
+    return lengthwords
 
 text = sys.argv[1]
 print("Number of vowels: ", num_vowels(text))
