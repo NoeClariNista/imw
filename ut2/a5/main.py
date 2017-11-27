@@ -22,7 +22,7 @@ def num_whitespaces(text):
 
 
 def num_digits(text):
-    NUMBERS = '0123456789'
+    NUMBERS = "0123456789"
     num = 0
     for i in text:
         if i in NUMBERS:
