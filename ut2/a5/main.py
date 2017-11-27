@@ -31,7 +31,7 @@ def num_digits(text):
 
 
 def num_words(text):
-    text = text.split(" ")
+    text = text.split()
     number_words = len(text)
     return number_words
 
@@ -65,7 +65,7 @@ def upper_vowels(text):
 
 
 def sorted_by_words(text):
-    text = text.split(" ")
+    text = text.split()
     sorted_text = sorted(text)
     sorted_words = " ".join(sorted_text)
     return sorted_words
