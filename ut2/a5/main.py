@@ -6,34 +6,34 @@ import sys
 def num_vowels(text):
     VOWELS = "aeiou"
     text = text.lower()
-    number = 0
+    number_vowels = 0
     for vowel in text:
         if vowel in VOWELS:
-            number += 1
-    return number
+            number_vowels += 1
+    return number_vowels
 
 
 def num_whitespaces(text):
-    number = 0
+    number_whitespaces = 0
     for space in text:
         if space == " ":
-            number += 1
-    return number
+            number_whitespaces += 1
+    return number_whitespaces
 
 
 def num_digits(text):
     NUMBERS = "0123456789"
-    number = 0
+    number_digits = 0
     for number in text:
         if number in NUMBERS:
-            number += 1
-    return number
+            number_digits += 1
+    return number_digits
 
 
 def num_words(text):
     text = text.split(" ")
-    number_word = len(text)
-    return number_word
+    number_words = len(text)
+    return number_words
 
 
 def reverse(text):
@@ -42,8 +42,8 @@ def reverse(text):
 
 
 def length(text):
-    lengh = len(text)
-    return lengh
+    lengt = len(text)
+    return lengt
 
 
 def halfs(text):
@@ -55,31 +55,31 @@ def halfs(text):
 
 def upper_vowels(text):
     VOWELS = "aeiouAEIOU"
-    uppertext = ""
+    upper_text = ""
     for vowel in text:
         if vowel in VOWELS:
-            uppertext += vowel.upper()
+            upper_text += vowel.upper()
         else:
-            uppertext += vowel
-    return uppertext
+            upper_text += vowel
+    return upper_text
 
 
 def sorted_by_words(text):
     text = text.split(" ")
-    sortedtext = sorted(text)
-    sortedwords = " ".join(sortedtext)
-    return sortedwords
+    sorted_text = sorted(text)
+    sorted_words = " ".join(sorted_text)
+    return sorted_words
 
 
 def length_of_words(text):
     text = text.split()
-    newlist = list()
-    listsize = len(text)
-    for i in range(listsize):
+    new_list = list()
+    list_size = len(text)
+    for i in range(list_size):
         value = len(text[i])
-        newlist.append(str(value))
-    lengthwords = " ".join(newlist)
-    return lengthwords
+        new_list.append(str(value))
+    length_words = " ".join(new_list)
+    return length_words
 
 text = sys.argv[1]
 print("Number of vowels: ", num_vowels(text))
