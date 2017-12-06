@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>index.html</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+    </head>
+    <body>
+        <h1>{{ vmachine.name }}</h1>
+        <h2>{{ vmachine.os }}</h2>
+        <table class="table0">
+            <tr>
+                {% if vmachine.status == 0: %}
+                    <td class="td01">{{ vmachine.get_status() }}</td>
+                {% elif vmachine.status == 1: %}
+                    <td class="td02">{{ vmachine.get_status() }}</td>
+                {% else: %}
+                    <td class="td03">{{ vmachine.get_status() }}</td>
+                {% endif %}
+                <td class="td1"><a href="/change_status/0">Parar.</a></td>
+                <td class="td2"><a href="/change_status/1">Arrancar.</a></td>
+                <td class="td3"><a href="/change_status/2">Suspender.</a></td>
+            </tr>
+        </table>
+        <table class="table1">
+            <tr class="tr0">
+                <td></td>
+                <td><p>TOTAL.</p></td>
+                <td><p>% USADO.</p></td>
+            <tr class="tr1">
+                <td><p>RAM.</p></td>
+                <td>{{ vmachine.ram }}GB</td>
+                <td>{{ vmachine.ram_usage() }}%</td>
+            </tr>
+            <tr class="tr2">
+                <td><p>CPU.</p></td>
+                <td>{{ vmachine.cpu }}Ghz</td>
+                <td>{{ vmachine.cpu_usage() }}%</td>
+            </tr>
+            <tr class="tr3">
+                <td><p>HDD.</p></td>
+                <td>{{ vmachine.hdd }}MB</td>
+                <td>{{ vmachine.hdd_usage() }}%</td>
+            </tr>
+        </table>
+        {% if vmachine.status == 1: %}
+            <a class="a0"href="/run_process" style="color:">Lanzar proceso.</a>
+        {% endif %}
+        <table class="table2">
+            {% for proc in vmachine.proc %}
+                <tr class="tr0">
+                    <td class="td1" colspan="3"><p class="p1s">Proceso:{{ proc.pid }}</p></td>
+                </tr>
+                <tr class="tr1">
+                    <td class="td2"><p class="p2">RAM: {{ proc.ram }}GB.</p></td>
+                    <td class="td2"><p class="p2">CPU: {{ proc.cpu }}Ghz.</p></td>
+                    <td class="td2"><p class="p2">HDD: {{ proc.hdd }}MB.</p></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
