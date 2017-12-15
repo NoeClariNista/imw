@@ -1,0 +1,13 @@
+server {
+   server_name vm.alu5904.me;
+
+   location / {
+      include uwsgi_params;
+      uwsgi_pass unix:/tmp/vm.sock;
+   }
+
+   location /static {
+      root /home/alu5904/vm/a8;
+   }
+}
+
