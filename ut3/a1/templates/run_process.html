@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>run_process.html</title>
+    </head>
+    <body>
+        <h1>Lanzar proceso.</h1>
+        <form method="post" action="/run_process">
+            <table>
+                <tr">
+                    <td style="font-weight: bold; width: 100px;">PID.</td>
+                    <td><input type="text" name="pid" placeholder="Text input." required></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; width: 100px;">RAM.</td>
+                    <td><input type="text" name="ram" placeholder="Text input." required></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; width: 100px;">CPU.</td>
+                    <td><input type="text" name="cpu" placeholder="Text input." required></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; width: 100px;">HDD.</td>
+                    <td><input type="text" name="hdd" placeholder="Text input." required></td>
+                </tr>
+            </table>
+            <button type="submit" style="background-color: #3498db; color: white; padding: 4px 0px; width: 100px; border: solid; border-color: #3498db; font-weight: bold; text-align: center; border-radius: 4px; position: absolute;">Ejecutar!</button>
+        </form>
+    </body>
+</html>
+

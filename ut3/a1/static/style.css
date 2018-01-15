@@ -1,0 +1,119 @@
+body {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    position: absolute;
+}
+
+h1 {
+    color:black;
+    padding-left: 10px;
+}
+
+h2 {
+    color:#3498db;
+    padding-left: 10px;
+}
+
+.table0 {
+    padding: 5px 10px;
+}
+
+.table0 .td01 {
+    color:red;
+    font-weight: bold; 
+}
+
+.table0 .td02 {
+    color:green;
+    font-weight: bold; 
+}
+
+.table0 .td03 {
+    color:orange;
+    font-weight: bold; 
+}
+
+.table0 .td1 a, .table0 .td2 a, .table0 .td3 a {
+    color: #3498db;
+    font-weight: bold; 
+    text-decoration-line: none;
+    position: relative;
+    padding: 5px;
+    left: 100px;
+}
+
+.table0 .td1 a:hover{
+    color: red;
+}
+
+.table0 .td2 a:hover{
+    color: green;
+}
+
+.table0 .td3 a:hover{
+    color: orange;
+}
+
+.table1 {
+    padding: 5px 10px;
+    width: 500px;
+    text-align: center;
+}
+
+.table1 .tr0 td, .table1 .tr1 td, .table1 .tr2 td, .table1 .tr3 td{
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 3px; 
+    padding-left: 5px;
+}
+
+.table1 .tr0 {
+    font-weight: bold; 
+    border-width: 1px;
+    border-color: grey;
+    border-style: solid;
+}
+
+.table1 .tr1, .table1 .tr3 {
+    color: black;
+    background-color: lightgrey;
+}
+
+.a0 {
+    color: #3498db;
+    font-weight: bold; 
+    padding: 5px 10px;
+    text-decoration-line: none;
+}
+
+.a0:hover{
+    color: blue;
+}
+
+.table2 {
+    padding: 5px 10px;
+    width: 500px;
+}
+
+.table2 .tr0 .td1 { 
+    background-color: #3498db;
+    color: white;
+    font-weight: bold; 
+    border-style: solid;
+    border-color: #3498db;
+    border-width: 1px;
+    border-radius: 3px; 
+    padding-left: 5px;
+}
+
+.table2 .tr1 .td2{ 
+    background-color: white;
+    color: black;
+    border-style: solid;
+    border-color: #3498db;
+    border-width: 1px;
+    border-radius: 3px; 
+    text-align: center;
+}
