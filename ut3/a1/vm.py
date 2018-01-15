@@ -4,7 +4,7 @@ from mysql import DB
 class VirtualMachine:
 
     def __init__(self, id):
-        self.db = DB("emmet", "brown", "vmweb")
+        self.db = DB("noeclarinista", "78646393-dD", "vmweb")
         sql = f"select * from vmachine where id={id}"
         query = self.db.query(sql)
         self.id = query[0]["id"]
