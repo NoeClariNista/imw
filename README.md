@@ -12,6 +12,8 @@ ___
 
 * ### **[UT1 - A3 : Trabajo Con Virtual Hosts.](https://github.com/NoeClariNista/imw/blob/master/ut1/a3/README.md)**
 
+* ### **[UT1 - A4 : Sirviendo Aplicaciones Php Y Python.](https://github.com/NoeClariNista/imw/blob/master/ut1/a4/README.md)**
+
 ---
 
 ## **UT2. Desarrollo Web Con Python.**
@@ -25,6 +27,10 @@ ___
 * ### **[UT2 - A4 : Secuenciando!.](https://github.com/NoeClariNista/imw/tree/master/ut2/a4)**
 
 * ### **[UT2 - A5 : Utilizando Funciones.](https://github.com/NoeClariNista/imw/tree/master/ut2/a5)**
+
+* ### **[UT2 - A6 : Búscalo En El Diccionario!.](https://github.com/NoeClariNista/imw/tree/master/ut2/a6)**
+
+* ### **[UT2 - A8 : Gestionando Mi Máquina Virtual Vía Web.](https://github.com/NoeClariNista/imw/tree/master/ut2/a8)**
 
 ---
 
