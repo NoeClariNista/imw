@@ -6,6 +6,6 @@ env.hosts = ["cloud"]
 
 def deploy():
     local("git push")
-    with cd("~/vm/a8"):
+    with cd("~/vm2/a1"):
         run("git pull")
         run("supervisorctl restart vm")

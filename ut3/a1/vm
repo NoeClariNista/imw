@@ -1,5 +1,5 @@
 server {
-   server_name vm.alu5904.me;
+   server_name vm2.alu5904.me;
 
    location / {
       include uwsgi_params;
@@ -7,7 +7,7 @@ server {
    }
 
    location /static {
-      root /home/alu5904/vm/a8;
+      root /home/alu5904/vm2/a1;
    }
 }
 
