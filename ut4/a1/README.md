@@ -4,15 +4,11 @@ ___
 
 ---
 
-## **1. Instalación De Wordpress.**
+## **Instalación de Wordpress.**
 
 Vamos a instalar un sitio web Wordpress en nuestra máquina de producción. Para ello accedemos a la máquina de producción vía ssh.
 
 ![imagen01](./img/01.png)
-
----
-
-## **2. Configuración De La Base De Datos.**
 
 Wordpress necesita un usuario/contraseña para acceder a una base de datos. Para ello, usaremos el intérprete de MySQL.
 
@@ -21,10 +17,6 @@ Wordpress necesita un usuario/contraseña para acceder a una base de datos. Para
 Tenemos que crear la base de datos, el usuario y asignar privilegios.
 
 ![imagen03](./img/03.png)
-
----
-
-## **3. Descarga De Código.**
 
 Descargamos el código fuente de Wordpress desde su página web.
 
@@ -39,10 +31,6 @@ Descomprimimos el código y lo copiamos en /usr/share.
 Ahora tenemos que establecer los permisos necesarios para que el usuario web www-data pueda usar estos ficheros.
 
 ![imagen07](./img/07.png)
-
----
-
-## **4. Editar Ficheros De Configuración.**
 
 Debemos especificar el nombre de la base de datos, el usuario y la contraseña, para que Wordpress pueda usarlos.
 
@@ -66,10 +54,6 @@ define('DB_CHARSET', 'utf8mb4');
 ~~~
 
 ![imagen09](./img/09.png)
-
----
-
-## **5. Acceso Mediante Nginx.**
 
 Para que nuestro sitio Wordpress sea accesible desde un navegador web, debemos incluir las directivas necesarias en la configuración del servidor web Nginx.
 
@@ -99,10 +83,6 @@ Recargamos el servidor web Nginx para que los cambios sean efectivos.
 
 ![imagen13](./img/13.png)
 
----
-
-## **6. Configuración Del Sitio Vía Web.**
-
 Ahora podemos acceder a la dirección de nuestro servidor para configurar nuestro Wordpress vía web.
 
 Cuando accedemos a `http://wordpress.alu5904.me` nos redirige a `http://wordpress.alu5904.me/wp-admin/install.php`.
@@ -127,7 +107,31 @@ Así habremos podido acceder a la interfaz administrativa de Wordpress.
 
 ---
 
-## **7. Ajuste De Permalinks.**
+## **2. Instalar Y Activar Un Tema.**
+
+Instalamos y activamos un tema gratuito.
+
+![imagen25](./img/25.png)
+
+![imagen26](./img/26.png)
+
+![imagen27](./img/27.png)
+
+![imagen28](./img/28.png)
+
+![imagen29](./img/29.png)
+
+![imagen30](./img/30.png)
+
+![imagen31](./img/31.png)
+
+![imagen32](./img/32.png)
+
+![imagen33](./img/33.png)
+
+---
+
+## **3. Ajuste De Permalinks.**
 
 En primer lugar activamos esta opción dentro de la interfaz administrativa de Wordpress.
 
@@ -159,31 +163,7 @@ Una ventaja que tiene este método es que podemos acceder a la zona administrati
 
 ---
 
-## **8. Instalar Y Activar Un Tema.**
-
-Instalamos y activamos un tema gratuito.
-
-![imagen25](./img/25.png)
-
-![imagen26](./img/26.png)
-
-![imagen27](./img/27.png)
-
-![imagen28](./img/28.png)
-
-![imagen29](./img/29.png)
-
-![imagen30](./img/30.png)
-
-![imagen31](./img/31.png)
-
-![imagen32](./img/32.png)
-
-![imagen33](./img/33.png)
-
----
-
-## **9. Post Con Las Estadísticas De Uso De Wordpress .**
+## **4. Post Con Las Estadísticas De Uso De Wordpress .**
 
 Escribimos un post con las estadísticas de uso de Wordpress.
 
