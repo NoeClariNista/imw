@@ -157,6 +157,8 @@ Una ventaja que tiene este método es que podemos acceder a la zona administrati
 
 ![imagen24](./img/24.png)
 
+---
+
 ## **8. Instalar Y Activar Un Tema.**
 
 Instalamos y activamos un tema gratuito.
@@ -178,6 +180,8 @@ Instalamos y activamos un tema gratuito.
 ![imagen32](./img/32.png)
 
 ![imagen33](./img/33.png)
+
+---
 
 ## **9. Post Con Las Estadísticas De Uso De Wordpress .**
 
