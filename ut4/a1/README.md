@@ -50,7 +50,7 @@ Enlazamos la configuración para que el virtual host esté disponible.
 
 ![imagen12](./img/12.png)
 
-Recargamos el Servidor web Nginx para que los cambios sean efectivos.
+Recargamos el Servidor web Nginx para que los cambios surtan efecto.
 
 ![imagen13](./img/13.png)
 
