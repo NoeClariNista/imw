@@ -4,13 +4,13 @@ ___
 
 ---
 
-## **Instalación de Wordpress.**
+## **1. Instalación de Wordpress.**
 
-Vamos a instalar un sitio web Wordpress en nuestra máquina de producción. Para ello accedemos a la máquina de producción vía ssh.
+Vamos a instalar un sitio web Wordpress en nuestra máquina. Para ello accedemos a la máquina de producción vía ssh.
 
 ![imagen01](./img/01.png)
 
-Wordpress necesita un usuario/contraseña para acceder a una base de datos. Para ello, usaremos el intérprete de MySQL.
+Wordpress necesita un usuario y una contraseña para acceder a una base de datos. Para ello, usaremos el intérprete de MySQL.
 
 ![imagen02](./img/02.png)
 
@@ -22,7 +22,7 @@ Descargamos el código fuente de Wordpress desde su página web.
 
 ![imagen04](./img/04.png)
 
-Descomprimimos el código y lo copiamos en /usr/share.
+Descomprimimos el código y lo copiamos en `/usr/share`.
 
 ![imagen05](./img/05.png)
 
@@ -36,42 +36,13 @@ Debemos especificar el nombre de la base de datos, el usuario y la contraseña, 
 
 ![imagen08](./img/08.png)
 
-~~~
-...
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wpdatabase');
-
-/** MySQL database username */
-define('DB_USER', 'wpuser');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'Testing_1234');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
-...
-~~~
-
 ![imagen09](./img/09.png)
 
-Para que nuestro sitio Wordpress sea accesible desde un navegador web, debemos incluir las directivas necesarias en la configuración del servidor web Nginx.
+Para que nuestro sitio Wordpress sea accesible desde un navegador web, debemos incluir las directivas necesarias en la configuración del Servidor web Nginx.
 
-Supongamos que queremos acceder a nuestro Wordpress desde la url wordpress.imwpto.me. Para ello tendremos que crear un nuevo virtual host de la siguiente manera.
+Queremos acceder a nuestro Wordpress desde la url `wordpress.alu5904.me`. Para ello tendremos que crear un nuevo virtual host de la siguiente manera.
 
 ![imagen10](./img/10.png)
-
-~~~
-server {
-    server_name wordpress.imwpto.me;
-    index index.php;
-    root /usr/share/wordpress;
-    location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-    }
-}
-~~~
 
 ![imagen11](./img/11.png)
 
@@ -79,7 +50,7 @@ Enlazamos la configuración para que el virtual host esté disponible.
 
 ![imagen12](./img/12.png)
 
-Recargamos el servidor web Nginx para que los cambios sean efectivos.
+Recargamos el Servidor web Nginx para que los cambios sean efectivos.
 
 ![imagen13](./img/13.png)
 
@@ -107,7 +78,7 @@ Así habremos podido acceder a la interfaz administrativa de Wordpress.
 
 ---
 
-## **2. Instalar Y Activar Un Tema.**
+## **2. Instalación Y Activación De Un Tema.**
 
 Instalamos y activamos un tema gratuito.
 
@@ -163,7 +134,7 @@ Una ventaja que tiene este método es que podemos acceder a la zona administrati
 
 ---
 
-## **4. Post Con Las Estadísticas De Uso De Wordpress .**
+## **4. Post Con Las Estadísticas De Uso De Wordpress.**
 
 Escribimos un post con las estadísticas de uso de Wordpress.
 
