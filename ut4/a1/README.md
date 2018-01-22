@@ -82,55 +82,63 @@ Así habremos podido acceder a la interfaz administrativa de Wordpress.
 
 Instalamos y activamos un tema gratuito.
 
+Para instalar un nuevo tema tenemos que ir a Apariencia y ahí añadir un tema nuevo.
+
+![imagen19](./img/19.png)
+
+Elegimos el tema que más nos guste, en mi caso Sparkling.
+
+![imagen20](./img/20.png)
+
+Una vez instalado le damos a Activar.
+
+![imagen21](./img/21.png)
+
+Ya tenemos instalado y activado el tema.
+
+![imagen22](./img/22.png)
+
+Vamos a `wordpress.alu5904.me` y comprobamos el tema instalado.
+
+![imagen23](./img/23.png)
+
+Para personalizar nuestro tema volvemos a ir a Apariencia y le damos a Personalizar.
+
+![imagen24](./img/24.png)
+
+Dentro de personalizar hacemos algunos cambios para poder verlos.
+
 ![imagen25](./img/25.png)
 
+Volvemos a ir a `wordpress.alu5904.me` y comprobamos los cambios hechos.
+
 ![imagen26](./img/26.png)
-
-![imagen27](./img/27.png)
-
-![imagen28](./img/28.png)
-
-![imagen29](./img/29.png)
-
-![imagen30](./img/30.png)
-
-![imagen31](./img/31.png)
-
-![imagen32](./img/32.png)
-
-![imagen33](./img/33.png)
 
 ---
 
 ## **3. Ajuste De Permalinks.**
 
-En primer lugar activamos esta opción dentro de la interfaz administrativa de Wordpress.
+Activamos esta opción dentro de la interfaz administrativa de Wordpress, concretamente en Ajustes, enlaces permanentes.
 
 Seleccionamos el ajuste Día y nombre. Pulsamos en Guardar cambios.
 
-![imagen19](./img/19.png)
+![imagen27](./img/27.png)
 
 Ahora debemos indicar a Nginx que procese estas URLs.
 
-![imagen20](./img/20.png)
+![imagen28](./img/28.png)
 
-~~~
-location / {
-    try_files $uri $uri/ /index.php?$args;
-}
-~~~
+![imagen29](./img/29.png)
 
-![imagen21](./img/21.png)
+Recargamos la configuración de Nginx.
 
-No olvidarnos de recargar la configuración de Nginx:
+![imagen30](./img/30.png)
 
-![imagen22](./img/22.png)
+Una ventaja que tiene este método es que podemos acceder a la zona administrativa utilizando la URL `http://wordpress.alu5904.me/admin`.
 
-Una ventaja que tiene este método es que podemos acceder a la zona administrativa utilizando la siguiente URL. http://wordpress.imwpto.me/admin
+![imagen31](./img/31.png)
 
-![imagen23](./img/23.png)
-
-![imagen24](./img/24.png)
+![imagen32](./img/32.png)
 
 ---
 
@@ -138,16 +146,18 @@ Una ventaja que tiene este método es que podemos acceder a la zona administrati
 
 Escribimos un post con las estadísticas de uso de Wordpress.
 
+![imagen33](./img/33.png)
+
+Una vez escrito el post lo publicamos.
+
 ![imagen34](./img/34.png)
 
 ![imagen35](./img/35.png)
 
-![imagen36](./img/36.png)
-
 Entramos a dicho post.
 
-![imagen37](./img/37.png)
+![imagen36](./img/36.png)
 
-![imagen38](./img/38.png)
+![imagen37](./img/37.png)
 
 ---
