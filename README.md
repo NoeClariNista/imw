@@ -40,8 +40,14 @@ ___
 
 ---
 
+<<<<<<< HEAD
 ## **.**
 
 * ### **[UT4 - A1: Implantación De Wordpress.](https://github.com/NoeClariNista/imw/tree/master/ut4/a1)**
+=======
+## **UT4: Wordpress: Implantación.**
+
+* ### **[UT4 - A1 : Implantación De Wordpress.](https://github.com/NoeClariNista/imw/blob/master/ut4/a1/README.md).**
+>>>>>>> 5047838b17b1385f249d2cae22b7e325a43b19db
 
 ---
