@@ -22,7 +22,7 @@
             $final_salary = $salary * 1.03;
         } 
         else {
-        $final_salary = $salary * 1.15;
+            $final_salary = $salary * 1.15;
         }
         echo ("$name $surnames con $age años cobrará $final_salary €.");
     } 
